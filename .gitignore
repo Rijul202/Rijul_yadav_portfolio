@@ -71,7 +71,6 @@ dist
 
 # Gatsby files
 .cache/
-public
 
 # Storybook build outputs
 .out
@@ -95,3 +94,6 @@ temp/
 # OS generated files
 Thumbs.db
 ehthumbs.db
+
+# Executable files
+*.exe
