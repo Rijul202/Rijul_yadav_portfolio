@@ -3,9 +3,6 @@ import emailjs from "@emailjs/browser";
 import Alert from "../components/Alert";
 import { Particles } from "../components/Particles";
 
-// Initialize EmailJS
-emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
-
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -16,6 +13,13 @@ const Contact = () => {
   const [showAlert, setShowAlert] = useState(false);
   const [alertType, setAlertType] = useState("success");
   const [alertMessage, setAlertMessage] = useState("");
+
+  // Initialize EmailJS with public key if available
+  const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+  if (publicKey) {
+    emailjs.init(publicKey);
+  }
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -63,11 +67,29 @@ const Contact = () => {
       return;
     }
 
+    // Check if EmailJS environment variables are configured
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    
+    if (!serviceId || !templateId || !publicKey) {
+      setIsLoading(false);
+      console.error("EmailJS configuration missing:", {
+        serviceId: !!serviceId,
+        templateId: !!templateId,
+        publicKey: !!publicKey,
+      });
+      showAlertMessage(
+        "danger",
+        "Contact form is not configured. Please contact the site owner."
+      );
+      return;
+    }
+
     try {
-      console.log("From submitted:", formData);
-      await emailjs.send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      console.log("Form submitted:", formData);
+      const response = await emailjs.send(
+        serviceId,
+        templateId,
         {
           from_name: formData.name,
           to_name: "Rijul",
@@ -76,14 +98,24 @@ const Contact = () => {
           message: formData.message,
         }
       );
+      console.log("EmailJS Success:", response);
       setIsLoading(false);
       setFormData({ name: "", email: "", message: "" });
-      showAlertMessage("success", "Your message has been sent!");
+      showAlertMessage("success", "Your message has been sent successfully!");
     } catch (error) {
       setIsLoading(false);
       console.error("EmailJS Error:", error);
-      console.error("Error details:", error.text || error.message);
-      showAlertMessage("danger", "Something went wrong! Please try again later.");
+      console.error("Error details:", error.text || error.message || error);
+      
+      // Provide more specific error messages
+      let errorMessage = "Something went wrong! Please try again later.";
+      if (error.text) {
+        errorMessage = `Error: ${error.text}`;
+      } else if (error.message) {
+        errorMessage = `Error: ${error.message}`;
+      }
+      
+      showAlertMessage("danger", errorMessage);
     }
   };
   return (

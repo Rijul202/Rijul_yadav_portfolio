@@ -119,7 +119,7 @@ export const myProjects = [
       "Focused on time and space complexity optimization, selecting appropriate data structures based on use cases.",
       "Strengthened understanding of DSA fundamentals through modular, well-structured, and reusable code.",
     ],
-    href: "https://github.com/Sudeshhna-01/Dsa-based-Project",
+    href: "https://dsa-based-project.vercel.app/",
     logo: "",
     image: "/assets/projects/cp analytics.png",
     tags: [
@@ -157,7 +157,7 @@ export const myProjects = [
       "Designed an interactive UI with synchronized map markers and recommendation list, enabling seamless user interaction and navigation.",
       "Built a modular React architecture using reusable components, custom hooks, and utility functions to ensure scalability and maintainability.",
     ],
-    href: "",
+    href: "https://github.com/Rijul202/Smart-Nearby-Places-Recommender",
     logo: "",
     image: "/assets/projects/smart nearby place.png",
     tags: [
