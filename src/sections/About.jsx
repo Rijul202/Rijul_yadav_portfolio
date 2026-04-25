@@ -27,30 +27,9 @@ const About = () => {
         </div>
         {/* Grid 2 */}
         <div className="grid-default-color grid-2">
-          <div className="flex flex-wrap items-center gap-2 md:hidden">
-            <p className="w-full mb-1 text-3xl text-gray-500">WEB DEVELOPER</p>
-            {[
-              "React",
-              "Node.js",
-              "MongoDB",
-              "JavaScript",
-              "Python",
-              "n8n",
-              "OpenAI API",
-              "Claude",
-              "Gemini API",
-            ].map((skill) => (
-              <span
-                key={skill}
-                className="px-3 py-1 text-xs rounded-full border border-white/20 bg-white/10 text-neutral-200"
-              >
-                {skill}
-              </span>
-            ))}
-          </div>
           <div
             ref={grid2Container}
-            className="items-center justify-center hidden w-full h-full md:flex"
+            className="flex items-center justify-center w-full h-full"
           >
             <p className="flex items-end text-5xl text-gray-500">
               WEB DEVELOPER
