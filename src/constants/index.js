@@ -183,6 +183,131 @@ export const myProjects = [
       },
     ],
   },
+  {
+    id: 6,
+    title: "AI Social Media Automation System",
+    description:
+      "Built a fully automated multi-platform content system for LinkedIn, Instagram, and Facebook with daily posting workflows and zero manual intervention.",
+    subDescription: [
+      "Designed an AI research agent using Gemini API to generate 7 days of content ideas aligned with company positioning and store them in Google Sheets for pipeline processing.",
+      "Developed content generation workflows leveraging Claude for captions, hashtags, and auto-commenting strategies to boost engagement.",
+      "Implemented authentication flows and API integrations across multiple social platforms with secure credential management.",
+      "Increased followers by 150% and page visits by 300% within one month across all platforms through intelligent automation.",
+    ],
+    href: "",
+    logo: "",
+    image: "/assets/projects/ai-social-media-automation.png",
+    tags: [
+      {
+        id: 1,
+        name: "n8n",
+        path: "",
+      },
+      {
+        id: 2,
+        name: "Claude",
+        path: "",
+      },
+      {
+        id: 3,
+        name: "Gemini API",
+        path: "",
+      },
+      {
+        id: 4,
+        name: "OpenAI",
+        path: "",
+      },
+      {
+        id: 5,
+        name: "Google Sheets",
+        path: "",
+      },
+    ],
+  },
+  {
+    id: 7,
+    title: "AI Lead Generation & Outreach Automation",
+    description:
+      "Built an automated lead generation pipeline using Apify scraping and Salesforce API for centralized lead management with webhook triggers.",
+    subDescription: [
+      "Developed an AI agent-based personalization engine using Claude and OpenAI to generate custom first lines for each lead before campaign entry.",
+      "Implemented authentication and API integration across Salesforce, Gmail, and Apollo with secure credential handling.",
+      "Increased email open rates from 8% to 60% and reply rates from 2% to 25% through AI-driven personalization.",
+      "Eliminated manual lead processing, enabling sales teams to focus on high-intent prospects through intelligent automation.",
+    ],
+    href: "",
+    logo: "",
+    image: "/assets/projects/ai-lead-generation-automation.png",
+    tags: [
+      {
+        id: 1,
+        name: "Apify",
+        path: "",
+      },
+      {
+        id: 2,
+        name: "OpenAI",
+        path: "",
+      },
+      {
+        id: 3,
+        name: "Salesforce",
+        path: "",
+      },
+      {
+        id: 4,
+        name: "n8n",
+        path: "",
+      },
+      {
+        id: 5,
+        name: "Python",
+        path: "",
+      },
+    ],
+  },
+  {
+    id: 8,
+    title: "Large-Scale Data Enrichment Pipeline",
+    description:
+      "Designed and deployed an automated data enrichment workflow for 20,000+ leads using Apify and Python scripts.",
+    subDescription: [
+      "Built an agent-based system to transform raw lead data into enriched profiles including email, LinkedIn, phone number, and metadata.",
+      "Integrated enriched data directly into CRM and Supabase with automated deduplication and validation logic.",
+      "Enabled scalable enrichment processing of 1000+ leads daily with 95% accuracy through robust error handling and retry logic.",
+    ],
+    href: "",
+    logo: "",
+    image: "/assets/projects/data-enrichment-pipeline.png",
+    tags: [
+      {
+        id: 1,
+        name: "Apify",
+        path: "",
+      },
+      {
+        id: 2,
+        name: "n8n",
+        path: "",
+      },
+      {
+        id: 3,
+        name: "Python",
+        path: "",
+      },
+      {
+        id: 4,
+        name: "Supabase",
+        path: "",
+      },
+      {
+        id: 5,
+        name: "CRM Integration",
+        path: "",
+      },
+    ],
+  },
 ];
 
 export const mySocials = [
@@ -193,8 +318,13 @@ export const mySocials = [
   },
   {
     name: "Linkedin",
-    href: "https://www.linkedin.com/in/rijul-yadav-1567b6324/",
+    href: "https://www.linkedin.com/in/rijul-yadav202/",
     icon: "/assets/socials/linkedIn.svg",
+  },
+  {
+    name: "GitHub",
+    href: "https://github.com/Rijul202",
+    icon: "/assets/logos/github.svg",
   },
   {
     name: "Instagram",
@@ -204,6 +334,17 @@ export const mySocials = [
 ];
 
 export const experiences = [
+  {
+    title: "AI Automation Engineer Intern",
+    job: "KPM Learning Solutions",
+    date: "Mar. 2026 - Present",
+    contents: [
+      "Built and deployed end-to-end AI agent automation systems using n8n and Claude to reduce manual effort across content, lead generation, and CRM operations.",
+      "Engineered multi-step content automation workflows with prompt chaining, review steps, and scheduled publishing using OpenAI and Gemini APIs.",
+      "Developed personalized outreach pipelines integrating Apollo, Google Sheets, Gmail API, and LLM-powered personalization for stronger response performance.",
+      "Designed webhook-driven CRM automations with real-time Slack alerts, lead routing, and automated follow-up task creation.",
+    ],
+  },
   {
     title: "SDE Intern",
     job: "POWER GRID",

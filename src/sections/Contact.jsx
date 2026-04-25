@@ -148,14 +148,14 @@ const Contact = () => {
               </a>
               <div className="flex items-center gap-2">
                 <span className="font-medium">LinkedIn:</span>
-                <a href="https://www.linkedin.com/in/rijul-yadav-1567b6324/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
-                  linkedin.com/in/rijul-yadav-1567b6324
+                <a href="https://www.linkedin.com/in/rijul-yadav202/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                  linkedin.com/in/rijul-yadav202
                 </a>
               </div>
               <div className="flex items-center gap-2">
                 <span className="font-medium">GitHub:</span>
-                <a href="https://github.com/rijulyadav" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
-                  github.com/rijulyadav
+                <a href="https://github.com/Rijul202" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                  github.com/Rijul202
                 </a>
               </div>
             </div>

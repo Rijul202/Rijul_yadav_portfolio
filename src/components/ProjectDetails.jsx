@@ -29,14 +29,23 @@ const ProjectDetails = ({
             <p key={index} className="mb-3 font-normal text-neutral-400">{subDesc}</p>
           ))}
           <div className="flex items-center justify-between mt-4">
-            <div className="flex gap-3">
+            <div className="flex flex-wrap gap-3">
               {tags.map((tag) => (
-                <img
-                  key={tag.id}
-                  src={tag.path}
-                  alt={tag.name}
-                  className="rounded-lg size-10 hover-animation"
-                />
+                tag.path ? (
+                  <img
+                    key={tag.id}
+                    src={tag.path}
+                    alt={tag.name}
+                    className="rounded-lg size-10 hover-animation"
+                  />
+                ) : (
+                  <span
+                    key={tag.id}
+                    className="px-3 py-1 text-xs rounded-full bg-white/10 text-neutral-200 border border-white/15"
+                  >
+                    {tag.name}
+                  </span>
+                )
               ))}
             </div>
             {href && (
